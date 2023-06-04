@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="language" content="en-us">
+        <meta name="title" content="Neuralsage">
+        <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+        <link rel="stylesheet" href="{% static 'css/sandbox.css' %}">
+        <link rel="stylesheet" href="{% static 'css/colors/aqua.css' %}">
+        <link rel="stylesheet" href="{% static 'css/unicons.css' %}">
+        <link rel="preload" href="{% static 'css/fonts/thicccboi.css' %}" as="style" onload="this.rel='stylesheet'">
+        {% block extrastyle %}{% endblock %}
+    </head>
+    <body>
+        <div class="content-wrapper"></div>
+        {% block content %}
+        {% endblock %}
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+    </body>
+</html>
